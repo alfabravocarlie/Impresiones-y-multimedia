@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresiones y Llenado de Memorias Anita y Ale - Matanzas</title>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7X8N809GZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-B7X8N809GZ');
+	</script>
+
+    <!-- Bootstrap CSS para diseño responsivo y componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons para iconos profesionales -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* --- ESTILOS PERSONALIZADOS --- */
+
+        /* Variables de color para fácil personalización */
+        :root {
+            --primary-color: #0d6efd; /* Azul Bootstrap */
+            --secondary-color: #6c757d; /* Gris */
+            --success-color: #198754; /* Verde */
+            --info-color: #0dcaf0;    /* Azul claro */
+            --warning-color: #ffc107; /* Amarillo */
+            --danger-color: #dc3545;  /* Rojo */
+            --light-color: #f8f9fa;   /* Fondo claro */
+            --dark-color: #212529;    /* Texto oscuro */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: var(--dark-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        /* Sección principal (Hero) */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Logo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Títulos de sección */
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        /* Tarjetas de precios */
+        .price-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--success-color);
+            font-size: 1.1rem;
+        }
+
+        /* Sección Sobre Nosotros */
+        .about-section {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .about-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .about-value {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .about-value i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Tarjetas de testimonios */
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-top: 10px;
+        }
+
+        /* Sección de contacto */
+        .contact-section {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Alerta personalizada para impresión */
+        .alert-printing {
+            background-color: #fff3cd;
+            border-left: 4px solid var(--warning-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none; /* Oculta por defecto */
+        }
+
+        /* Botón de WhatsApp */
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Nota sobre GB reales */
+        .storage-note {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        /* Estilo para los enlaces de las pestañas de precios para que se lean bien */
+        .nav-tabs .nav-link {
+            color: var(--dark-color) !important; /* Color de texto oscuro */
+            border-bottom: 3px solid transparent;
+            margin-bottom: -3px; /* Alinea el borde con el contenido */
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: var(--primary-color) !important; /* Color de texto al pasar el ratón */
+            border-bottom-color: var(--primary-color);
+        }
+
+        .nav-tabs .nav-link.active {
+            color: var(--primary-color) !important; /* Color de texto de la pestaña activa */
+            background-color: #fff;
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* Ajustes para móviles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .price-card {
+                margin-bottom: 15px;
+            }
+            .contact-section {
+                padding: 20px;
+            }
+            .about-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === NAVEGACIÓN === -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio"><i class="bi bi-printer-fill"></i> Impresiones y Llenado de Memorias Anita y Ale</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Página De Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === SECCIÓN INICIO (HERO) === -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Calidad Inigualable</h1>
+            <p class="hero-subtitle">Transforma tus ideas en realidad</p>
+            <a href="#servicios" class="btn btn-primary btn-lg mt-3">Conoce Nuestros Servicios</a>
+        </div>
+    </section>
+
+    <!-- === SECCIÓN SOBRE NOSOTROS === -->
+    <section id="nosotros" class="container my-5 py-4">
+        <h2 class="section-title">🖨️ Acerca de Nosotros</h2>
+        <div class="about-section">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="Impresiones.jpg" alt="Nuestra oficina" class="img-fluid about-image">
+                </div>
+                <div class="col-lg-6">
+                    <p class="mb-4">Bienvenido a nuestro sitio web, el espacio donde transformamos ideas en impresiones y recuerdos en memorias digitales. Nos especializamos en impresión personalizada y llenado de memorias, ofreciendo un servicio rápido, confiable y adaptado a sus necesidades.</p>
+                    
+                    <h4 class="mb-3">📌 ¿Quiénes somos?</h4>
+                    <p class="mb-4">Somos un equipo comprometido con brindar soluciones prácticas para estudiantes, profesionales y negocios. Ya sea que necesites imprimir documentos importantes o preparar una memoria digital lista para entregar, estamos aquí para ayudarte.</p>
+                    
+                    <h4 class="mb-3">💡 ¿Qué nos diferencia?</h4>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Atención personalizada: Nos adaptamos a cada cliente y cada proyecto.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Rapidez y eficiencia: Entregas puntuales sin sacrificar calidad.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Confianza y claridad: Lo que ves es lo que obtienes, sin complicaciones.</li>
+                    </ul>
+                    
+                    <h4 class="mb-3">🎯 Nuestros valores</h4>
+                    <div class="about-value">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Responsabilidad</span>
+                    </div>
+                    <div class="about-value">
+                        <i class="bi bi-eye"></i>
+                        <span>Transparencia</span>
+                    </div>
+                    <div class="about-value">
+                        <i class="bi bi-lightning"></i>
+                        <span>Eficiencia</span>
+                    </div>
+                    <div class="about-value">
+                        <i class="bi bi-heart"></i>
+                        <span>Respeto por tu tiempo y tus ideas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECCIÓN DE SERVICIOS === -->
+    <section id="servicios" class="container my-5 py-4">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        
+        <!-- Pestañas para separar servicios -->
+        <ul class="nav nav-tabs justify-content-center mb-4" id="priceTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="printing-tab" data-bs-toggle="tab" data-bs-target="#printing-panel" type="button">Servicios de Impresión</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory-tab" data-bs-toggle="tab" data-bs-target="#memory-panel" type="button">Memorias USB</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="priceTabsContent">
+            <!-- Panel de Precios de Impresión -->
+            <div class="tab-pane fade show active" id="printing-panel" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-file-text"></i> Impresión de Texto</h5>
+                            <div class="price-item"><span>Blanco y Negro</span><span class="price">$20</span></div>
+                            <div class="price-item"><span>A Color</span><span class="price">$30</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-image"></i> Impresión de Imágenes</h5>
+                            <div class="price-item"><span>Blanco y Negro</span><span class="price">$40</span></div>
+                            <div class="price-item"><span>A Color</span><span class="price">$50</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-file-earmark-copy"></i> Fotocopias</h5>
+                            <div class="price-item"><span>Blanco y Negro</span><span class="price">$50</span></div>
+                            <div class="price-item"><span>A Color</span><span class="price">$60</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-pencil-square"></i> Servicios Adicionales</h5>
+                            <div class="price-item"><span>Edición</span><span class="price">$100</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-credit-card"></i> Plasticado</h5>
+                            <div class="price-item"><span>Carnet Chiquito</span><span class="price">$200</span></div>
+                            <div class="price-item"><span>Mitad de Hoja Carta</span><span class="price">$300</span></div>
+                            <div class="price-item"><span>Tamaño Carta</span><span class="price">$600</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Información adicional -->
+                <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>¿Necesitas más información sobre nuestros servicios?</strong> Contáctanos por WhatsApp para una atención personalizada.
+                </div>
+            </div>
+            
+            <!-- Panel de Precios de Memorias -->
+            <div class="tab-pane fade" id="memory-panel" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-usb-drive"></i> Capacidades de Memoria</h5>
+                            <div class="price-item"><span>4 GB <span class="storage-note">(3.72 GB reales)</span></span><span class="price">$50</span></div>
+                            <div class="price-item"><span>8 GB <span class="storage-note">(7.56 GB reales)</span></span><span class="price">$100</span></div>
+                            <div class="price-item"><span>16 GB <span class="storage-note">(14.4 GB reales)</span></span><span class="price">$150</span></div>
+                            <div class="price-item"><span>32 GB <span class="storage-note">(29.8 GB reales)</span></span><span class="price">$200</span></div>
+                            <div class="price-item"><span>64 GB <span class="storage-note">(59.6 GB reales)</span></span><span class="price">$250</span></div>
+                            <div class="price-item"><span>128 GB <span class="storage-note">(119.2 GB reales)</span></span><span class="price">$300</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="price-card h-100">
+                            <h5 class="text-center mb-3"><i class="bi bi-book"></i> Contenido para Memorias</h5>
+                            <div class="price-item"><span>Capítulos de Novelas y Series </span><span class="price">$5 c/u</span></div>
+                            <div class="price-item"><span>Música</span><span class="price">$100 por GB</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Información adicional -->
+                <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>¿Buscas contenido específico?</strong> Escríbenos por WhatsApp y te ayudaremos a encontrar lo que necesitas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECCIÓN DE TESTIMONIOS === -->
+    <section id="testimonios" class="container my-5 py-4 bg-light rounded-3">
+        <h2 class="section-title">Testimonios</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-text">
+                        "Excelente servicio de impresión. Rápido, profesional y con precios muy competitivos. Definitivamente volveré."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Pedro L." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Pedro L.</div>
+                            <div class="testimonial-role">Cliente satisfecho</div>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-text">
+                        "La mejor opción en Matanzas para llenar memorias USB. Tienen una gran variedad de contenido y el servicio es excelente."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person2/60/60.jpg" alt="María J." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">María J.</div>
+                            <div class="testimonial-role">Cliente satisfecho</div>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card h-100">
+                    <div class="testimonial-text">
+                        "He utilizado sus servicios tanto para impresión como para llenado de memorias y siempre he quedado muy satisfecho. ¡Recomendado!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person3/60/60.jpg" alt="Luis A." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Luis A.</div>
+                            <div class="testimonial-role">Cliente satisfecho</div>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECCIÓN DE CONTACTO === -->
+    <section id="contacto" class="container my-5 py-4">
+        <h2 class="section-title">Contacto</h2>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="contact-section h-100">
+                    <h3 class="mb-4">Solicitar Servicio</h3>
+                    <form id="contactForm">
+                        <!-- Tipo de Servicio Principal -->
+                        <div class="mb-3">
+                            <label for="serviceType" class="form-label">¿Qué servicio deseas?</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="" selected disabled>Selecciona una opción</option>
+                                <option value="impresion">Impresión / Fotocopia</option>
+                                <option value="memoria">Llenado de Memoria USB</option>
+                            </select>
+                        </div>
+
+                        <!-- Opciones de Impresión (oculto por defecto) -->
+                        <div id="printingOptions" class="d-none">
+                            <div class="mb-3">
+                                <label for="printingSubtype" class="form-label">Tipo de impresión</label>
+                                <select class="form-select" id="printingSubtype">
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="imprimir">Imprimir</option>
+                                    <option value="fotocopiar">Fotocopiar</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Opciones adicionales para impresión -->
+                            <div class="mb-3">
+                                <label for="printingAdditional" class="form-label">¿Necesitas contenido adicional?</label>
+                                <select class="form-select" id="printingAdditional">
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="capitulos">Capítulos de Novelas</option>
+                                    <option value="gb">Música por GB</option>
+                                    <option value="no">No, solo impresión</option>
+                                </select>
+                            </div>
+                            
+                            <div class="alert alert-printing" id="printingAlert">
+                                <i class="bi bi-info-circle-fill"></i> <strong>Importante:</strong> Después de enviar tu solicitud, por favor envíanos el documento que deseas imprimir o fotocopiar por WhatsApp.
+                            </div>
+                        </div>
+                        
+                        <!-- Opciones adicionales para impresión (oculto por defecto) -->
+                        <div id="printingAdditionalOptions" class="d-none">
+                            <!-- Opción de Capítulos (oculto por defecto) -->
+                            <div id="printingChaptersOptions" class="d-none">
+                                <div class="mb-3">
+                                    <label for="printingChaptersQuantity" class="form-label">Cantidad de Capítulos</label>
+                                    <input type="number" class="form-control" id="printingChaptersQuantity" min="1" placeholder="Ej: 10">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="printingNovelSelect" class="form-label">Selecciona la Novela</label>
+                                    <select class="form-select" id="printingNovelSelect">
+                                        <option value="" selected disabled>Elige una novela de la lista</option>
+                                        <!-- Las novelas se cargarán aquí con JavaScript -->
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Opción de GB (oculto por defecto) -->
+                            <div id="printingGbOptions" class="d-none">
+                                <div class="mb-3">
+                                    <label for="printingGbQuantity" class="form-label">Cantidad de GB</label>
+                                    <select class="form-select" id="printingGbQuantity">
+                                        <option value="" selected disabled>Selecciona una capacidad</option>
+                                        <option value="4">4 GB</option>
+                                        <option value="8">8 GB</option>
+                                        <option value="16">16 GB</option>
+                                        <option value="32">32 GB</option>
+                                        <option value="64">64 GB</option>
+                                        <option value="128">128 GB</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Opciones de Memoria (oculto por defecto) -->
+                        <div id="memoryOptions" class="d-none">
+                            <div class="mb-3">
+                                <label for="memoryCapacity" class="form-label">Capacidad de la memoria</label>
+                                <select class="form-select" id="memoryCapacity">
+                                    <option value="" selected disabled>Selecciona una capacidad</option>
+                                    <option value="4">4 GB</option>
+                                    <option value="8">8 GB</option>
+                                    <option value="16">16 GB</option>
+                                    <option value="32">32 GB</option>
+                                    <option value="64">64 GB</option>
+                                    <option value="128">128 GB</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="memoryContent" class="form-label">¿Qué contenido deseas?</label>
+                                <select class="form-select" id="memoryContent">
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="capitulos">Capítulos de Novelas</option>
+                                    <option value="musica">Música</option>
+                                    <option value="ambos">Ambos</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Datos del Cliente -->
+                        <hr class="my-4">
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Tu Nombre</label>
+                            <input type="text" class="form-control" id="clientName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Tu Teléfono (para contactarte)</label>
+                            <input type="tel" class="form-control" id="clientPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="additionalInfo" class="form-label">Información Adicional (Opcional)</label>
+                            <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Algún detalle más..."></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="button" id="submitRequest" class="whatsapp-btn">
+                                <i class="bi bi-whatsapp"></i> Enviar Solicitud por WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="alert alert-info mt-4">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        <strong>¿Tienes preguntas?</strong> También puedes contactarnos directamente por WhatsApp para más información.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-section h-100">
+                    <h3 class="mb-4">Información de Contacto</h3>
+                    
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <strong>Dirección:</strong><br>
+                                Calle 79 entre 272 y 276, Matanzas, Cuba #27413B (Frente al Banco BPA)
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <strong>Teléfono:</strong><br>
+                                +53 58682731
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                sealpepe8@gmail.com
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-clock-fill"></i>
+                            <div>
+                                <strong>Horario:</strong><br>
+                               Lunes a Miércoles: 
+								
+								3:00 PM - 6:30 PM
+								<br>
+								Jueves a Viernes: 
+								
+								1:00 PM - 6:30 PM
+								<br>
+								Sábado: 
+								
+								10:00 AM - 6:30 PM
+								<br>
+								Domingo:
+								
+								12:00 PM - 6:30 PM
+									
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container mt-4">
+                        <h4 class="mb-3">Ubicación</h4>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8475633424166!2d-81.58565788509926!3d23.04927818494338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f1c7e5b1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sCalle%2079%20%26%20Calle%20272%2C%20Matanzas%2C%20Cuba!5e0!3m2!1ses!2s!4v1234567890" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === MODAL DE UBICACIÓN (SE MUESTRA DESPUÉS DE ENVIAR) === -->
+    <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="locationModalLabel"><i class="bi bi-check-circle"></i> ¡Solicitud Enviada!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="lead">Gracias por tu preferencia. Hemos recibido tu solicitud y te contactaremos pronto.</p>
+                    <p><strong>Puedes pasar a recoger tu pedido en nuestra ubicación:</strong></p>
+                    <hr>
+                    <p class="fw-bold">
+                        <i class="bi bi-geo-alt-fill text-danger"></i> Calle 79 Contreras % 274 y 276 Matanzas, Cuba Frente al banco BPA.
+                    </p>
+                    <p class="fw-bold">
+                        <i class="bi bi-info-circle-fill text-info"></i> Nota: Lo que sea convertido es con corriente.
+                    </p>
+                    
+                    <!-- Horario simple y directo -->
+                    <div class="mt-4 p-3 bg-light rounded">
+                        <h5 class="mb-3"><i class="bi bi-clock-fill"></i> Horario de Atención</h5>
+                        <div class="row text-start">
+                            <div class="col-6">
+                                <strong>Lunes a Miércoles:</strong><br>
+                                3:00 PM - 6:30 PM
+                            </div>
+                            <div class="col-6">
+                                <strong>Jueves a Viernes:</strong><br>
+                                1:00 PM - 6:30 PM
+                            </div>
+                            <div class="col-6 mt-2">
+                                <strong>Sábado:</strong><br>
+                                10:00 AM - 6:30 PM
+                            </div>
+                            <div class="col-6 mt-2">
+                                <strong>Domingo:</strong><br>
+                                12:00 PM - 6:30 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Impresiones y Llenado de Memorias. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="https://wa.me/+5358682731" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></p>
+            <p class="mt-2"><strong>¿Necesitas más información?</strong> Escríbenos por WhatsApp y te atenderemos lo mas pronto que podamos.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/+5358682731" target="_blank" class="whatsapp-float">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- CARGA Y BÚSQUEDA DE NOVELAS ---
+
+            // COMENTARIO IMPORTANTE:
+            // AQUÍ DEBES AGREGAR TU LISTA COMPLETA DE NOVELAS.
+            // Simplemente reemplaza los ejemplos de abajo con tus títulos.
+            // Puedes agregar tantas como necesites, separadas por comas y entre comillas.
+            const novels = [
+                "Cien años de soledad - Gabriel García Márquez",
+                "El amor en los tiempos del cólera - Gabriel García Márquez",
+                "Don Quijote de la Mancha - Miguel de Cervantes",
+                "La sombra del viento - Carlos Ruiz Zafón",
+                "El código Da Vinci - Dan Brown",
+                "Los pilares de la Tierra - Ken Follett",
+                "El perfume - Patrick Süskind",
+                "El alquimista - Paulo Coelho",
+                "El nombre de la rosa - Umberto Eco",
+                "Crónica de una muerte anunciada - Gabriel García Márquez",
+                "La casa de los espíritus - Isabel Allende",
+                "Rayuela - Julio Cortázar",
+                "Pedro Páramo - Juan Rulfo",
+                "La ciudad y los perros - Mario Vargas Llosa",
+                "El túnel - Ernesto Sábato",
+                "Sobre héroes y tumbas - Ernesto Sábato"
+            ];
+
+            const printingNovelSelect = document.getElementById('printingNovelSelect');
+
+            // Función para poblar la lista de novelas
+            function populateNovelList() {
+                // Limpiar lista anterior
+                printingNovelSelect.innerHTML = '<option value="" selected disabled>Elige una novela de la lista</option>';
+
+                novels.forEach(novel => {
+                    // Añadir al select del formulario
+                    const option = document.createElement('option');
+                    option.value = novel;
+                    option.textContent = novel;
+                    printingNovelSelect.appendChild(option);
+                });
+            }
+
+            // Llamar a la función al cargar la página
+            populateNovelList();
+
+            // --- LÓGICA DEL FORMULARIO DE CONTACTO ---
+
+            const serviceType = document.getElementById('serviceType');
+            const printingOptions = document.getElementById('printingOptions');
+            const printingSubtype = document.getElementById('printingSubtype');
+            const printingAdditional = document.getElementById('printingAdditional');
+            const printingAdditionalOptions = document.getElementById('printingAdditionalOptions');
+            const printingChaptersOptions = document.getElementById('printingChaptersOptions');
+            const printingGbOptions = document.getElementById('printingGbOptions');
+            const printingAlert = document.getElementById('printingAlert');
+            const memoryOptions = document.getElementById('memoryOptions');
+            const submitBtn = document.getElementById('submitRequest');
+
+            // Mostrar opciones según el tipo de servicio
+            serviceType.addEventListener('change', function() {
+                const selectedService = this.value;
+                // Ocultar todo primero
+                printingOptions.classList.add('d-none');
+                printingAdditionalOptions.classList.add('d-none');
+                memoryOptions.classList.add('d-none');
+                printingAlert.style.display = 'none';
+
+                if (selectedService === 'impresion') {
+                    printingOptions.classList.remove('d-none');
+                } else if (selectedService === 'memoria') {
+                    memoryOptions.classList.remove('d-none');
+                }
+            });
+
+            // Mostrar alerta si se elige una opción de impresión
+            printingSubtype.addEventListener('change', function() {
+                if (this.value) {
+                    printingAlert.style.display = 'block';
+                } else {
+                    printingAlert.style.display = 'none';
+                }
+            });
+
+            // Mostrar opciones adicionales para impresión
+            printingAdditional.addEventListener('change', function() {
+                printingChaptersOptions.classList.add('d-none');
+                printingGbOptions.classList.add('d-none');
+                printingAdditionalOptions.classList.add('d-none');
+
+                if (this.value === 'capitulos') {
+                    printingAdditionalOptions.classList.remove('d-none');
+                    printingChaptersOptions.classList.remove('d-none');
+                } else if (this.value === 'gb') {
+                    printingAdditionalOptions.classList.remove('d-none');
+                    printingGbOptions.classList.remove('d-none');
+                }
+            });
+
+            // --- ENVÍO DE SOLICITUD POR WHATSAPP ---
+
+            submitBtn.addEventListener('click', function() {
+                // Obtener valores del formulario
+                const clientName = document.getElementById('clientName').value;
+                const clientPhone = document.getElementById('clientPhone').value;
+                const additionalInfo = document.getElementById('additionalInfo').value;
+
+                // Validación simple
+                if (!serviceType.value || !clientName || !clientPhone) {
+                    alert('Por favor, completa los campos obligatorios (Tipo de servicio, Nombre y Teléfono).');
+                    return;
+                }
+
+                let message = `Hola, quiero solicitar un servicio.\n\n`;
+                message += `*Nombre:* ${clientName}\n`;
+                message += `*Teléfono:* ${clientPhone}\n\n`;
+                message += `*Detalles del pedido:*\n`;
+
+                if (serviceType.value === 'impresion') {
+                    message += `- Servicio: Impresión / Fotocopia\n`;
+                    message += `- Tipo: ${printingSubtype.value || 'No especificado'}\n`;
+                    
+                    if (printingAdditional.value === 'capitulos') {
+                        const chaptersQty = document.getElementById('printingChaptersQuantity').value;
+                        const selectedNovel = document.getElementById('printingNovelSelect').value;
+                        message += `- Contenido adicional: ${chaptersQty || '0'} capítulos de la novela "${selectedNovel || 'No especificada'}"\n`;
+                    } else if (printingAdditional.value === 'gb') {
+                        const gbQty = document.getElementById('printingGbQuantity').value;
+                        message += `- Contenido adicional: ${gbQty || 'No especificado'} GB de música\n`;
+                    }
+                } else if (serviceType.value === 'memoria') {
+                    message += `- Servicio: Llenado de Memoria USB\n`;
+                    message += `- Capacidad: ${document.getElementById('memoryCapacity').value || 'No especificada'} GB\n`;
+                    message += `- Contenido: ${document.getElementById('memoryContent').value || 'No especificado'}\n`;
+                }
+
+                if (additionalInfo) {
+                    message += `\n*Información Adicional:* ${additionalInfo}\n`;
+                }
+
+                // Codificar el mensaje para URL
+                const encodedMessage = encodeURIComponent(message);
+                
+                // Número de WhatsApp (corregido con el código de país de Cuba +53)
+                const whatsappNumber = '+5358682731'; 
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                // Abrir WhatsApp en una nueva pestaña
+                window.open(whatsappUrl, '_blank');
+
+                // Mostrar el modal con la ubicación después de enviar
+                const locationModal = new bootstrap.Modal(document.getElementById('locationModal'));
+                locationModal.show();
+            });
+
+        });
+    </script>
+</body>
+</html>
