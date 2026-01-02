@@ -517,51 +517,55 @@
             <div class="tab-pane fade show active" id="printing-panel" role="tabpanel">
                 <div class="text-center mb-5" data-aos="fade-down">
                     <p class="lead">¿Buscas una novela en especial?</p>
-                    <a href="https://alfabravocarlie.github.io/Cargue/" target="_blank" class="magnetic-btn btn-neon-light rounded-pill px-5">
+                    <a href="https://github.com/alfabravocarlie/Cargue" target="_blank" class="magnetic-btn btn-neon-light rounded-pill px-5">
                         <i class="bi bi-box-seam me-2"></i> Ver lista de Novelas
                     </a>
                 </div>
 
                 <div class="row g-4">
+                    <!-- TEXTO -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="price-card h-100 text-center tilt-card">
                             <div class="mb-3" style="color: var(--primary-color);"><i class="bi bi-file-text fs-1"></i></div>
                             <h5 class="mb-4 fw-bold">Texto</h5>
-                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price">$20</span></div>
-                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price">$30</span></div>
+                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price" id="price-texto-bn">$20</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price" id="price-texto-color">$30</span></div>
                         </div>
                     </div>
+                    <!-- IMÁGENES -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="price-card h-100 text-center tilt-card">
                             <div class="mb-3" style="color: var(--primary-color);"><i class="bi bi-image fs-1"></i></div>
                             <h5 class="mb-4 fw-bold">Imágenes</h5>
-                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price">$40</span></div>
-                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price">$50</span></div>
+                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price" id="price-imagen-bn">$40</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price" id="price-imagen-color">$50</span></div>
                         </div>
                     </div>
+                    <!-- FOTOCOPIAS -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="price-card h-100 text-center tilt-card">
                             <div class="mb-3" style="color: var(--primary-color);"><i class="bi bi-file-earmark-copy fs-1"></i></div>
                             <h5 class="mb-4 fw-bold">Fotocopias</h5>
-                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price">$50</span></div>
-                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price">$60</span></div>
+                            <div class="price-item justify-content-between px-4"><span>B/N</span><span class="price" id="price-foto-bn">$50</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Color</span><span class="price" id="price-foto-color">$60</span></div>
                         </div>
                     </div>
-                    <!-- Tarjetas Adicionales y Plasticado -->
+                    <!-- ADICIONALES -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                         <div class="price-card h-100 text-center tilt-card">
                             <div class="mb-3" style="color: var(--accent-color);"><i class="bi bi-pencil-square fs-1"></i></div>
                             <h5 class="mb-4 fw-bold">Adicionales</h5>
-                            <div class="price-item justify-content-between px-4"><span>Edición</span><span class="price">$100</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Edición</span><span class="price" id="price-edicion">$100</span></div>
                         </div>
                     </div>
+                    <!-- PLASTICADO -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                         <div class="price-card h-100 text-center tilt-card">
                             <div class="mb-3" style="color: var(--warning-color);"><i class="bi bi-credit-card fs-1"></i></div>
                             <h5 class="mb-4 fw-bold">Plasticado</h5>
-                            <div class="price-item justify-content-between px-4"><span>Carnet</span><span class="price">$200</span></div>
-                            <div class="price-item justify-content-between px-4"><span>1/2 Carta</span><span class="price">$300</span></div>
-                            <div class="price-item justify-content-between px-4"><span>Carta</span><span class="price">$600</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Carnet</span><span class="price" id="price-plas-carnet">$200</span></div>
+                            <div class="price-item justify-content-between px-4"><span>1/2 Carta</span><span class="price" id="price-plas-medio">$300</span></div>
+                            <div class="price-item justify-content-between px-4"><span>Carta</span><span class="price" id="price-plas-carta">$600</span></div>
                         </div>
                     </div>
                 </div>
@@ -574,7 +578,7 @@
                         <div class="text-center p-5 rounded-4" style="background: rgba(0,255,136,0.05); border: 1px solid var(--glass-border);">
                             <h3 class="mb-3 fw-bold">🔍 ¿No sabes qué pedir?</h3>
                             <p class="mb-4">Consulta nuestro catálogo completo antes de pedir.</p>
-                            <a href="https://alfabravocarlie.github.io/Cargue/" target="_blank" class="magnetic-btn btn-neon-success btn-lg rounded-pill">
+                            <a href="https://github.com/alfabravocarlie/Cargue" target="_blank" class="magnetic-btn btn-neon-success btn-lg rounded-pill">
                                 <i class="bi bi-github me-2"></i> Catálogo Completo
                             </a>
                         </div>
@@ -585,19 +589,19 @@
                     <div class="col-lg-8" data-aos="fade-right">
                         <div class="price-card h-100 tilt-card">
                             <h5 class="text-center mb-4 fw-bold" style="color: var(--primary-color);"><i class="bi bi-usb-drive me-2"></i> Capacidad</h5>
-                            <div class="price-item"><span>4 GB <small style="color: #666;">(3.72 real)</small></span><span class="price">$50</span></div>
-                            <div class="price-item"><span>8 GB <small style="color: #666;">(7.56 real)</small></span><span class="price">$100</span></div>
-                            <div class="price-item"><span>16 GB <small style="color: #666;">(14.4 real)</small></span><span class="price">$150</span></div>
-                            <div class="price-item"><span>32 GB <small style="color: #666;">(29.8 real)</small></span><span class="price">$200</span></div>
-                            <div class="price-item"><span>64 GB <small style="color: #666;">(59.6 real)</small></span><span class="price">$250</span></div>
-                            <div class="price-item"><span>128 GB <small style="color: #666;">(119.2 real)</small></span><span class="price">$300</span></div>
+                            <div class="price-item"><span>4 GB <small style="color: #666;">(3.72 real)</small></span><span class="price" id="price-mem-4gb">$50</span></div>
+                            <div class="price-item"><span>8 GB <small style="color: #666;">(7.56 real)</small></span><span class="price" id="price-mem-8gb">$100</span></div>
+                            <div class="price-item"><span>16 GB <small style="color: #666;">(14.4 real)</small></span><span class="price" id="price-mem-16gb">$150</span></div>
+                            <div class="price-item"><span>32 GB <small style="color: #666;">(29.8 real)</small></span><span class="price" id="price-mem-32gb">$200</span></div>
+                            <div class="price-item"><span>64 GB <small style="color: #666;">(59.6 real)</small></span><span class="price" id="price-mem-64gb">$250</span></div>
+                            <div class="price-item"><span>128 GB <small style="color: #666;">(119.2 real)</small></span><span class="price" id="price-mem-128gb">$300</span></div>
                         </div>
                     </div>
                     <div class="col-lg-4" data-aos="fade-left">
                         <div class="price-card h-100 tilt-card">
                             <h5 class="text-center mb-4 fw-bold" style="color: var(--accent-color);"><i class="bi bi-collection-play me-2"></i> Contenido</h5>
-                            <div class="price-item"><span>Capítulos Novelas</span><span class="price">$5 c/u</span></div>
-                            <div class="price-item"><span>Música</span><span class="price">$100 / GB</span></div>
+                            <div class="price-item"><span>Capítulos Novelas</span><span class="price" id="price-cont-capitulos">$5 c/u</span></div>
+                            <div class="price-item"><span>Música</span><span class="price" id="price-cont-musica">$100 / GB</span></div>
                         </div>
                     </div>
                 </div>
@@ -812,7 +816,7 @@
                     </div>
                     
                     <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8475633424166!2d-81.58565788509926!3d23.04927818494338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f1c7e5b1b1b1b1%3A0x1b1b1b1b1b1b1b!2sCalle%2079%20%26%20Calle%20272%2C%20Matanzas%2C%20Cuba!5e0!3m2!1ses!2s!4v1234567890" allowfullscreen loading="lazy" style="filter: invert(90%) hue-rotate(180deg);"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8475633424166!2d-81.58565788509926!3d23.04927818494338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f1c7e5b1b1b1b1%3A0x1b1b1b1b1b1b!2sCalle%2079%20%26%20Calle%20272%2C%20Matanzas%2C%20Cuba!5e0!3m2!1ses!2s!4v1234567890" allowfullscreen loading="lazy" style="filter: invert(90%) hue-rotate(180deg);"></iframe>
                     </div>
                 </div>
             </div>
@@ -826,7 +830,7 @@
             <p class="mb-4">Hecho con ❤️ en Matanzas</p>
             <div>
                 <a href="https://wa.me/+5358682731" target="_blank" class="mx-2"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                <a href="https://alfabravocarlie.github.io/Cargue/" target="_blank" class="mx-2"><i class="bi bi-github"></i> GitHub</a>
+                <a href="https://github.com/alfabravocarlie/Cargue" target="_blank" class="mx-2"><i class="bi bi-github"></i> GitHub</a>
             </div>
         </div>
     </footer>
@@ -978,30 +982,90 @@
         };
         function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 
-        // --- FUNCIÓN DESCARGAR PRECIOS ---
-        function downloadPrices(e) {
+        // --- NUEVO: CARGAR Y ACTUALIZAR PRECIOS (INTEGRACIÓN CON JSON) ---
+        let preciosData = null; // Variable global para cachear
+
+        async function loadPrices() {
+            try {
+                const response = await fetch('precios.json');
+                const data = await response.json();
+                preciosData = data; // Guardar en caché
+                updateUIPrices(data);
+                console.log("Precios cargados desde JSON correctamente.");
+            } catch (error) {
+                console.error("No se pudo cargar precios.json (o archivo no existe). Usando fallback.", error);
+                // Opcional: Si falla, podrías usar precios por defecto aquí
+            }
+        }
+
+        function updateUIPrices(data) {
+            // Actualizar Impresiones
+            document.getElementById('price-texto-bn').innerText = '$' + data.impresion.texto_bn;
+            document.getElementById('price-texto-color').innerText = '$' + data.impresion.texto_color;
+            document.getElementById('price-imagen-bn').innerText = '$' + data.impresion.imagen_bn;
+            document.getElementById('price-imagen-color').innerText = '$' + data.impresion.imagen_color;
+            document.getElementById('price-foto-bn').innerText = '$' + data.impresion.fotocopia_bn;
+            document.getElementById('price-foto-color').innerText = '$' + data.impresion.fotocopia_color;
+            document.getElementById('price-edicion').innerText = '$' + data.impresion.edicion;
+            document.getElementById('price-plas-carnet').innerText = '$' + data.impresion.plasticado_carnet;
+            document.getElementById('price-plas-medio').innerText = '$' + data.impresion.plasticado_medio;
+            document.getElementById('price-plas-carta').innerText = '$' + data.impresion.plasticado_carta;
+
+            // Actualizar Memorias
+            document.getElementById('price-mem-4gb').innerText = '$' + data.memoria.capacidad['4gb'];
+            document.getElementById('price-mem-8gb').innerText = '$' + data.memoria.capacidad['8gb'];
+            document.getElementById('price-mem-16gb').innerText = '$' + data.memoria.capacidad['16gb'];
+            document.getElementById('price-mem-32gb').innerText = '$' + data.memoria.capacidad['32gb'];
+            document.getElementById('price-mem-64gb').innerText = '$' + data.memoria.capacidad['64gb'];
+            document.getElementById('price-mem-128gb').innerText = '$' + data.memoria.capacidad['128gb'];
+            document.getElementById('price-cont-capitulos').innerText = '$' + data.memoria.contenido.capitulos + ' c/u';
+            document.getElementById('price-cont-musica').innerText = '$' + data.memoria.contenido.musica + ' / GB';
+        }
+
+        // --- FUNCIÓN DESCARGAR PRECIOS (LEIDA DESDE JSON) ---
+        async function downloadPrices(e) {
             e.preventDefault();
-            const content = "LISTA DE PRECIOS - ANITA Y ALE\n\n" +
-                            "SERVICIOS DE IMPRESIÓN:\n" +
-                            "- Texto B/N: $20\n" +
-                            "- Texto Color: $30\n" +
-                            "- Imágenes B/N: $40\n" +
-                            "- Imágenes Color: $50\n" +
-                            "- Fotocopias B/N: $50\n" +
-                            "- Fotocopias Color: $60\n" +
-                            "- Edición: $100\n" +
-                            "- Plasticado Carnet: $200\n" +
-                            "- Plasticado 1/2 Carta: $300\n" +
-                            "- Plasticado Carta: $600\n\n" +
-                            "MEMORIAS USB:\n" +
-                            "- 4 GB: $50\n" +
-                            "- 8 GB: $100\n" +
-                            "- 16 GB: $150\n" +
-                            "- 32 GB: $200\n" +
-                            "- 64 GB: $250\n" +
-                            "- 128 GB: $300\n" +
-                            "- Capítulos Novelas: $5 c/u\n" +
-                            "- Música: $100 / GB";
+            let content = "";
+            
+            try {
+                // Intentamos leer el JSON para descargar la versión actualizada
+                const response = await fetch('precios.json');
+                const data = await response.json();
+
+                content = "LISTA DE PRECIOS - ANITA Y ALE (Actualizado)\n\n" +
+                        "SERVICIOS DE IMPRESIÓN:\n" +
+                        "- Texto B/N: $" + data.impresion.texto_bn + "\n" +
+                        "- Texto Color: $" + data.impresion.texto_color + "\n" +
+                        "- Imágenes B/N: $" + data.impresion.imagen_bn + "\n" +
+                        "- Imágenes Color: $" + data.impresion.imagen_color + "\n" +
+                        "- Fotocopias B/N: $" + data.impresion.fotocopia_bn + "\n" +
+                        "- Fotocopias Color: $" + data.impresion.fotocopia_color + "\n" +
+                        "- Edición: $" + data.impresion.edicion + "\n" +
+                        "- Plasticado Carnet: $" + data.impresion.plasticado_carnet + "\n" +
+                        "- Plasticado 1/2 Carta: $" + data.impresion.plasticado_medio + "\n" +
+                        "- Plasticado Carta: $" + data.impresion.plasticado_carta + "\n\n" +
+                        "MEMORIAS USB:\n" +
+                        "- 4 GB: $" + data.memoria.capacidad['4gb'] + "\n" +
+                        "- 8 GB: $" + data.memoria.capacidad['8gb'] + "\n" +
+                        "- 16 GB: $" + data.memoria.capacidad['16gb'] + "\n" +
+                        "- 32 GB: $" + data.memoria.capacidad['32gb'] + "\n" +
+                        "- 64 GB: $" + data.memoria.capacidad['64gb'] + "\n" +
+                        "- 128 GB: $" + data.memoria.capacidad['128gb'] + "\n" +
+                        "- Capítulos Novelas: $" + data.memoria.contenido.capitulos + " c/u\n" +
+                        "- Música: $" + data.memoria.contenido.musica + " / GB";
+
+            } catch (err) {
+                // Si falla (por ejemplo al abrir localmente el archivo), usamos valores por defecto
+                content = "LISTA DE PRECIOS - ANITA Y ALE (Predeterminado)\n\n" +
+                        "SERVICIOS DE IMPRESIÓN:\n" +
+                        "- Texto B/N: $20\n" + "- Texto Color: $30\n" + "- Imágenes B/N: $40\n" + "- Imágenes Color: $50\n" + "- Fotocopias B/N: $50\n" + "- Fotocopias Color: $60\n" + "- Edición: $100\n" + "- Plasticado Carnet: $200\n" + "- Plasticado 1/2 Carta: $300\n" + "- Plasticado Carta: $600\n\n" +
+                        "MEMORIAS USB:\n" +
+                        "- 4 GB: $50\n" + "- 8 GB: $100\n" + "- 16 GB: $150\n" + "- 32 GB: $200\n" + "- 64 GB: $250\n" + "- 128 GB: $300\n" +
+                        "- Capítulos Novelas: $5 c/u\n" + "- Música: $100 / GB";
+                alert("No se pudo conectar para obtener la lista actual, descargando la lista por defecto.");
+            }
+
+            // Crear Blob para descarga
             const blob = new Blob([content], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1047,7 +1111,10 @@
                 });
             }
             searchRecursive(catalogData.children);
+            renderResults(results);
+        }
 
+        function renderResults(results) {
             resultsArea.innerHTML = '';
             if (results.length === 0) { resultsArea.innerHTML = '<div class="text-center text-muted">No se encontraron resultados.</div>'; }
             else {
@@ -1071,6 +1138,9 @@
 
         // Form Logic
         document.addEventListener('DOMContentLoaded', function() {
+            // 1. Cargar precios al inicio
+            loadPrices();
+
             const serviceType = document.getElementById('serviceType');
             const printingOptions = document.getElementById('printingOptions');
             const memoryOptions = document.getElementById('memoryOptions');
