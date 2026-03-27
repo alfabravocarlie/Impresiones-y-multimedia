@@ -1085,7 +1085,7 @@
         let catalogData = null;
         let searchTimeout = null;
 
-        fetch('directory_structure.json')
+        fetch('directory_structure_local.json')
             .then(response => response.json())
             .then(data => {
                 catalogData = data;
